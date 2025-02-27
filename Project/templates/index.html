@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IMDb Top 1000</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+  img {
+    border-radius: 8%;
+  }
+</style>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('home') }}">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="{{ url_for('analytics') }}">Analytics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{{ url_for('recommendations') }}">Recommendations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{{ url_for('survey') }}">Survey</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Placeholder</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Placeholder</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+      
+      <div class="card text-bg-warning text-warning w-100 p-0.5 rounded-0">0</div>
+
+      <div class="card text-center bg-dark text-light rounded-0">
+        <div class="card-header">
+          <h5>Trending Movies</h5>
+        </div>
+      </div>
+
+      <div class="container mt-5 mb-5">
+        <div class="row mx-2">
+          <div class="col-md-4">
+            <a href="https://www.themoviedb.org/movie/278-the-shawshank-redemption" target="_blank" class="text-reset text-decoration-none">
+              <div class="card">
+                <h5 class="card-header text-center">The ShawShank Redemption</h5>
+                <img src="https://image.tmdb.org/t/p/original/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg" class="px-2 py-2" alt="TSR">
+                <div class="card mx-2 my-2">
+                  <p class="card-text px-2 py-2">A banker convicted of uxoricide forms a friendship over a quarter century with a hardened convict, while maintaining his innocence and trying to remain hopeful through simple compassion.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="https://www.themoviedb.org/movie/238-the-godfather" target="_blank" class="text-reset text-decoration-none">
+              <div class="card">
+                <h5 class="card-header text-center">The Godfather</h5>
+                <img src="https://image.tmdb.org/t/p/original/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" class="px-2 py-2" alt="TGF">
+                <div class="card mx-2 my-2">
+                  <p class="card-text px-2 py-2">The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="https://www.themoviedb.org/movie/155-the-dark-knight" target="_blank" class="text-reset text-decoration-none">
+              <div class="card">
+                <h5 class="card-header text-center">The Dark Knight</h5>
+                <img src="https://image.tmdb.org/t/p/original/qJ2tW6WMUDux911r6m7haRef0WH.jpg" class="px-2 py-2" alt="TDK">
+                <div class="card mx-2 my-2">
+                  <p class="card-text px-2 py-2">When a menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman, James Gordon and Harvey Dent must work together to put an end to the madness.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+</body>
+</html>
