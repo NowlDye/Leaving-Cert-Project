@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plan & Design</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        nav {
+            background-color: #003135; 
+        } 
+        body {
+            color: #AFDDE5;
+            background-color: #024950;
+        }
+        a {
+            text-decoration: none;
+            color: #AFDDE5;
+        }
+        .pages {
+            padding: 5px;
+        }
+        a:hover {
+            background-color: #0FA4AF;
+        }
+        .nav-item.pages:hover {
+            background-color: #0FA4AF;
+        }
+        .navbar-brand {
+            margin: auto;
+        }
+        .card {
+            text-align: center;
+            width: 100%;
+        }
+        .card-img {
+            object-fit: contain;
+            width: 100%;
+        }
+        .card-body {
+            padding: 0;
+            color: #003135;
+        }
+        .card-text {
+            white-space: pre-wrap;
+            text-align: justify;
+        }
+        .flowchart {
+            display: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark px-3">
+        <div class="container-fluid d-flex justify-content-center">
+            <div class="navbar-brand">
+                <h1>Computer Science</h1>
+            </div>
+        </div>
+    </nav>
+    <nav class="nav nav-pills nav-justified border-top p-2">
+        <a class="nav-item pages" href="meetingthebrief.html">Meeting The Brief</a>
+        <a class="nav-item pages" href="investigation.html">Investigation</a>
+        <a class="nav-item pages" href="plan&design.html">Plan & Design</a>
+        <a class="nav-item pages" href="create.html">Create</a>
+        <a class="nav-item pages" href="evaluation.html">Evaluation</a>
+        <a class="nav-item pages" href="references.html">References</a>
+    </nav>
+    <div class="container my-4">
+        <div class="card">
+            <div class="card-body p-4" id="card-content">
+                <h2 class="card-title">Plan & Design</h2>
+                <p class="card-text">
+                    This project is a web app that helps users explore the top 1000 movies from IMDb. It's built using Flask, a simple tool for creating websites. 
+                    The goal is to let users look at movie data, get movie suggestions, and join surveys in a fun and easy way.
+
+                    Technologies Used
+                    Flask: Flask is the main tool used to build the app. It helps set up the pages, handle user requests, and display the data.
+                    
+                    Pandas: Pandas is a tool used to clean and organize the movie data from a CSV file. The prepare_data function makes sure the data is ready for analysis.
+                    
+                    Plotly: Plotly is used to make interactive graphs and charts from the movie data. These visualizations are saved and shown on the website.
+                    
+                    HTML/CSS: The websites design is made using HTML and CSS. These tools create the layout and style of the pages, making them look good on any device.
+                    
+                    JavaScript: JavaScript is used to make the website interactive. For example, it helps the survey page update the data when users interact with it.
+                    
+                    Application Design
+                    The app has a few important parts:
+                    
+                    Data Preparation: The prepare_data function organizes the movie data by cleaning up missing information, and changing data types.
+                    
+                    Visualization Generation: The generate_visualisations_plotly function creates charts and graphs based on the data, which are then displayed on the website.
+                    
+                    Routes and Templates: The app has different pages for different purposes:
+                    
+                    /: The home page that shows an introduction to the app.
+                    /analytics: A page that shows graphs and insights about the movie data.
+                    /recommendations: A page that shows the top 10 movies with ratings higher than 8.5.
+                    /survey: A page where users can take a survey about the movies.
+                    Static Files: All images, styles, and scripts are stored in the 'static' folder to make sure the website runs smoothly.</p>
+                <button class="btn btn-primary" id="toggle-button">Flowchart</button>
+            </div>
+            <div class="flowchart" id="flowchart-content">
+                <img src="../static/flowchart.png" alt="Flowchart" class="img-fluid">
+                <button class="btn btn-primary" id="back-button">Back</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('toggle-button').addEventListener('click', function() {
+            document.getElementById('card-content').style.display = 'none';
+            document.getElementById('flowchart-content').style.display = 'block';
+        });
+
+        document.getElementById('back-button').addEventListener('click', function() {
+            document.getElementById('flowchart-content').style.display = 'none';
+            document.getElementById('card-content').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
